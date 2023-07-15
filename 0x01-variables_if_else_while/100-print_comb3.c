@@ -15,7 +15,6 @@ while (i <= 56)
   *corresponding value
   *use nested loop one for the first digit and the other for second
   */
-putchar (i);
 while (j <= 57)
 {
 putchar (i);
