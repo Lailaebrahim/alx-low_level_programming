@@ -26,7 +26,7 @@ printf("Last digit of %d is %d and is greater than 5\n", n, x);
 else
 {
       /*else case is the number is not negative or positive it is equal zero */
-printf("Last digit of %d is %d and is greater than 5\n", n, x);
+printf("Last digit of %d is %d and is 0\n", n, x);
 }
 return (0);
 }
