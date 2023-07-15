@@ -14,8 +14,8 @@ while (i <= 122)
   *corresponding value
   */
 putchar (i);
-/*putchar ('\n');*/
 i++;
 }
+putchar ('\n');
 return (0);
 }
