@@ -20,6 +20,7 @@ i = 65;
 while (i <= 90)
 {
 putchar (i);
+i++;
 }
 putchar ('\n');
 return (0);
