@@ -19,13 +19,15 @@ while (j <= 57)
 {
 putchar (i);
 putchar (j);
-if (i < 56)
+if (i <= 56 && j <= 56)
 {
 putchar (',');
 putchar (' ');
 }
-i++;
+j++;
 }
+i++;
+j = 49;
 }
 putchar ('\n');
 return (0);
