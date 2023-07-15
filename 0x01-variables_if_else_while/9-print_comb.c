@@ -14,8 +14,11 @@ while (i <= 57)
   *corresponding value
   */
 putchar (i);
+if (i < 57)
+{
 putchar (',');
 putchar (' ');
+}
 i++;
 }
 putchar ('\n');
