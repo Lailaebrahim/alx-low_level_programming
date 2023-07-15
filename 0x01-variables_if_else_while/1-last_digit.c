@@ -10,9 +10,9 @@ int main(void)
 {
 int n;
 int x;
-x = n % 10; /*to get last digit */
 srand(time(0));
 n = rand() - RAND_MAX / 2;
+x = n % 10; /*to get last digit */
 if (x < 6 && x != 0)
 {
       /* this condition check if the number is less than 0 so it is negative */
