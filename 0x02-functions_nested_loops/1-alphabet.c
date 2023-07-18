@@ -7,7 +7,7 @@ void print_alphabet_x10(void)
 {
 int i = 97;
 int j = 0;
-while (i<10)
+while (j < 10)
 {
 while (i <= 122)
 {   /*to print alphapets use a while loop to loop over the ascii
@@ -15,9 +15,10 @@ while (i <= 122)
 	       *alpabet using it is ascii
 	       *corresponding value
 	       */
-_putchar (i);
+_putchar(i);
 i++;
 }
-_putchar ('\n');
+_putchar('\n');
+j++;
 }
 }
