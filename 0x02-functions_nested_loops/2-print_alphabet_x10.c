@@ -1,15 +1,25 @@
-#ifndef 2-print_alphabet_x10_h
-#define 2-print_alphabet_x10_h
-#include < stdio.h >
-#include "2-print_alphabet_x10.h"
+#include "main.h"
 /**
- * main - Entry point
- *
- * Return: Always 0 (Success)
+ * print_alphabet_x10 - Write a function that prints the alphabet, in lowercase
+ * followed by a new line 10 times.
+ * Return: No return
  */
-int main(void)
+void print_alphabet_x10(void)
+{/*to print alphapets use a while loop to loop over the ascii
+  *value of each alphabet and use putchar to print
+  *alpabet using it is ascii
+  *corresponding value
+  */
+int i = 97;
+int j = 0;
+while (j < 10)
 {
-print_alphabet_x10();
-return (0);
+while (i <= 122)
+{
+_putchar (i);
+i++;
 }
-#endif
+j++;
+_putchar ('\n');
+}
+}
