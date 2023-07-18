@@ -1,7 +1,7 @@
 #include "main.h"
 /**
- * print_alphabet - Write a function that prints the alphabet, in lowercase, followed by a new line 10 times.
- * @param: No parameters
+ * print_alphabet - Write a function that prints the alphabet, in lowercase, followed by a new line.
+ * @parameter : No parameters
  * Return: No return
  */
 void print_alphabet(void)
