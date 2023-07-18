@@ -1,16 +1,8 @@
-#include "main.h"
 /**
- * main - Entry point
- *
- * Return: Always 0 (Success)
+ * print_alphabet - Write a function that prints the alphabet, in lowercase, followed by a new line 10 times.
+ * @param: No parameters
+ * Return: No return
  */
-int main(void)
-{
-  /**
-   * print_alphabet - Write a function that prints the alphabet, in lowercase, followed by a new line 10 times.
-   * @param: No parameters
-   * Return: No return
-   */
 void print_alphabet_x10(void)
 {
 int i = 97;
@@ -28,6 +20,4 @@ i++;
 }
 _putchar ('\n');
 }
-}
-return (0);
 }
