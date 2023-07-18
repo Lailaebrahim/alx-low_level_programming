@@ -19,7 +19,7 @@ while (i <= 122)
 _putchar (i);
 i++;
 }
-j++;
 _putchar ('\n');
+j++;
 }
 }
