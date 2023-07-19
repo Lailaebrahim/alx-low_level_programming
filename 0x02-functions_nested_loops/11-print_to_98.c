@@ -19,8 +19,11 @@ else
 _putchar((i / 10) + '0');
 _putchar((i % 10) + '0');
 }
-_putchar (',');
-_putchar (' ');
+if (i != 98)
+{
+_putchar(',');
+_putchar(' ');
+}
 i++;
 }
 _putchar('\n');
