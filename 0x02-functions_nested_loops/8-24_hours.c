@@ -12,7 +12,7 @@ while (j <= 3)
 {
 while (k <= 5)
 {
-while (l <= 59)
+while (l <= 9)
 {
 _putchar (i + '0');
 _putchar (j + '0');
