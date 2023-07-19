@@ -13,6 +13,7 @@ while (j <= 3)
 while (k <= 5)
 {
 while (l <= 59)
+{
 _putchar (i + '0');
 _putchar (j + '0');
 _putchar (':');
