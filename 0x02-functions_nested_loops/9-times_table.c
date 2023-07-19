@@ -12,12 +12,12 @@ while (j <= 9)
 {
 if (((i *j) / 10) == 0)
 {
-putchar((i *j) + '0');
+_putchar((i *j) + '0');
 }
 else
 {
-putchar(((i *j) / 10) + '0');
-putchar(((i *j) % 10) + '0');
+_putchar(((i *j) / 10) + '0');
+_putchar(((i *j) % 10) + '0');
 }
 if (j != 9)
 {
