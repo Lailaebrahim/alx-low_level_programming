@@ -5,20 +5,18 @@
  */
 void rev_string(char *s)
 {
-int i = 0;
-char s1 = s[0];
+char s_rev = s[0];
+int i = 0, len = 0;
 while (s[i] != '\0')
 {
-i++;
+len++;
 }
-i--;
-while (i >= 0)
+for (i = 0; i < len; i++)
 {
-*s1 = s[i];
-i--;
-s[i] = s[i==];
-s1++;
+len--;
+s_rev = s[i];
+s[i] = s[len];
+s[s_rev] = s_rev;
 }
-s = s1;
 return;
 }
