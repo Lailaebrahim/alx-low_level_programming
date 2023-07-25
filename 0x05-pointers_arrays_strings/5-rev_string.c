@@ -16,7 +16,7 @@ for (i = 0; i < len; i++)
 len--;
 s_rev = s[i];
 s[i] = s[len];
-s[s_rev] = s_rev;
+s[len] = s_rev;
 }
 return;
 }
