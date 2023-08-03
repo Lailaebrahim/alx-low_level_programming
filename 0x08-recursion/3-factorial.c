@@ -8,8 +8,7 @@
  */
 int factorial(int n)
 {
-int fact = 1;
 if (n <= 0)
 return (1);
-fact = fact *factorial(n - 1);
+return n *factorial(n - 1);
 }
