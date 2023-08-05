@@ -53,8 +53,11 @@ return (n);
 int main(int argc, char *argv[])
 {
 int res = 0;
-if ( argc < 3)
+if ( argc < 3 || argc > 3)
+{
 printf("%s\n", "Error");
+return (1);
+}
 res = _atoi(argv[1]) * _atoi(argv[2]);
 printf("%d\n", res);
 return (0);
