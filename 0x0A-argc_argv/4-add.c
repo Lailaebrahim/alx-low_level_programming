@@ -20,8 +20,6 @@ while (s[len] != '\0')
 len++;
 while (i < len && f == 0)
 {
-if (s[i] == '-')
-return (-1);
 if (s[i] >= '0' && s[i] <= '9')
 {
 digit = s[i] - '0';
@@ -30,7 +28,7 @@ digit = -digit;
 n = n * 10 + digit;
 f = 1;
 if (s[i + 1] < '0' || s[i + 1] > '9')
-break;
+return (-1);
 f = 0;
 }
 else
