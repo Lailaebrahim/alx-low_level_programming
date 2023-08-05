@@ -9,9 +9,8 @@
  */
 int _atoi(char *s)
 {
-int i, d, n, len, digit;
+int i, n, len, digit;
 i = 0;
-d = 0;
 n = 0;
 len = 0;
 digit = 0;
@@ -22,16 +21,9 @@ while (i < len)
 if (s[i] >= '0' && s[i] <= '9')
 {
 digit = s[i] - '0';
-if (d % 2)
-digit = -digit;
 n = n * 10 + digit;
-<<<<<<< HEAD
-=======
-f = 1;
-if (s[i + 1] < '0' || s[i + 1] > '9')
+if ((s[i + 1] < '0' || s[i + 1] > '9') && s[i + 1] != '\0')
 return (-1);
-f = 0;
->>>>>>> 05c0bea4496d796e0972a83945ac96f3f29ad8e3
 }
 else
 return (-1);
