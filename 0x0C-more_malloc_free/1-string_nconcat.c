@@ -28,7 +28,7 @@ j++;
 }
 if (n < j)
 ptr = (malloc(sizeof(char) * (i + n + 1)));
- else
+else
 {
 n = j;
 ptr = (malloc(sizeof(char) * (i + n + 1)));
