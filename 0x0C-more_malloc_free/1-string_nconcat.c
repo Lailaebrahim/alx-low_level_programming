@@ -23,29 +23,27 @@ if (s2 == NULL)
 j = 0;
 else
 {
-while (s1[j] != '\0')
+while (s2[j] != '\0')
 j++;
 }
-if (n < j)
-ptr = (malloc(sizeof(char) * (i + n + 1)));
-else
-{
+if (n >= j)
 n = j;
 ptr = (malloc(sizeof(char) * (i + n + 1)));
-}
 if (ptr == NULL)
 return (NULL);
 else
 {
-for (; k <= (n + i) ; k++)
+while (k < i)
 {
-if (k < i)
 ptr[k] = s1[k];
-else if (k >= i && k <= (i + n))
+k++;
+}
+while (k >= i && k < (n + i))
+{
 ptr[k] = s2[k - i];
-else
+k++;
+}
+}
 ptr[k] = '\0';
-}
-}
 return (ptr);
 }
