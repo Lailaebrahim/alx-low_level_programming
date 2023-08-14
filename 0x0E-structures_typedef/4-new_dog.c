@@ -16,25 +16,24 @@ s++;
 return (len);
 }
 /**
- * _strncpy - concatenat a string
- * @dest : a pointer to the string to concatenate
- * @src : a pointer to the string to be concatenated to first string
- * @n : number of bytes to concatenate from src
- * Return: string concatenated
+ * char *_strcpy - a function that copies the string pointed to by src
+ * @dest: copy to
+ * @src: copy from
+ * Return: string
  */
-char *_strncpy(char *dest, char *src, int n)
+char *_strcpy(char *dest, char *src)
 {
+int j = 0;
 int i = 0;
-while (i < n && dest[i] != '\0' && src[i] != '\0')
+while (*(src + i) != '\0')
 {
-dest[i] = src[i];
 i++;
 }
-while (i < n)
+for ( ; j < i ; j++)
 {
+dest[j] = src[j];
+}
 dest[i] = '\0';
-i++;
-}
 return (dest);
 }
 /**
@@ -47,12 +46,13 @@ return (dest);
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-dog_t dog2 = malloc(sizeof(dog_t));
+dog_t *dog2 = malloc(sizeof(dog_t));
+int len_name;
+int len_owner;
 if (dog2 == NULL)
 return (NULL);
-int len_name = _strlen(name);
-int len_owner = _strlen(owner);
-
+len_owner = _strlen(owner);
+len_name = _strlen(name);
 dog2->name = malloc(sizeof(char) * (len_name + 1));
 if (dog2->name == NULL)
 return (NULL);
@@ -60,7 +60,7 @@ dog2->age = age;
 dog2->owner = malloc(sizeof(char) * (len_owner + 1));
 if (dog2->owner == NULL)
 return (NULL);
-_strcpy(dog->name, name);
-_strcpy(dog->owner, owner);
+_strcpy(dog2->name, name);
+_strcpy(dog2->owner, owner);
 return (dog2);
 }
