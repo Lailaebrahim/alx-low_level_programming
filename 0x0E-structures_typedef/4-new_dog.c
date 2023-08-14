@@ -55,11 +55,19 @@ len_owner = _strlen(owner);
 len_name = _strlen(name);
 dog2->name = malloc(sizeof(char) * (len_name + 1));
 if (dog2->name == NULL)
+{
+free(dog2->name);
+free(dog2);
 return (NULL);
+}
 dog2->age = age;
 dog2->owner = malloc(sizeof(char) * (len_owner + 1));
 if (dog2->owner == NULL)
+{
+free(dog2->owner);
+free(dog2);
 return (NULL);
+}
 _strcpy(dog2->name, name);
 _strcpy(dog2->owner, owner);
 return (dog2);
