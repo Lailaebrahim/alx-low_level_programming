@@ -16,7 +16,7 @@ for (i = 0 ; i < size ; i++)
 {
 ret = cmp(array[i]);
 if (ret != 0)
-return (array[i]);
+return (i);
 }
 return (-1);
 }
