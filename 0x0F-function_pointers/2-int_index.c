@@ -8,14 +8,15 @@
  */
 int int_index(int *array, int size, int (*cmp)(int))
 {
-unsigned int i;
+int i;
 int ret = 0;
 if (array == NULL || cmp == NULL || size <= 0)
 return (-1);
-for (i == 0 ; i < size ; i++)
+for (i = 0 ; i < size ; i++)
 {
 ret = cmp(array[i]);
 if (ret == 0)
-return (arra[i]);
+return (array[i]);
 }
+return (-1);
 }
