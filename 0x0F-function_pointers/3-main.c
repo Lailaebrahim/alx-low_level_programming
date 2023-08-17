@@ -24,7 +24,7 @@ exit(98);
 }
 
 if (*op != '+' && *op != '-' && *op != '/' &&
-*op != '%' && *op != '*')
+*op != '%' && *op != '*' && (get_op_func(op) == NULL || op[1] != '\0'))
 {
 printf("Error\n");
 exit(99);
