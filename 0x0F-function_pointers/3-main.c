@@ -2,32 +2,6 @@
 #include <stdio.h>
 #include "3-calc.h"
 #include "function_pointers.h"
-/**
- * _atoi - convert a string into an integer.
- *
- * @s: the string to use.
- *
- * Return: integer.
- */
-
-int _atoi(char *s)
-{
-int sign = 1, i = 0;
-unsigned int res = 0;
-while (!(s[i] <= '9' && s[i] >= '0') && s[i] != '\0')
-{
-if (s[i] == '-')
-sign *= -1;
-i++;
-}
-while (s[i] <= '9' && (s[i] >= '0' && s[i] != '\0'))
-{
-res = (res * 10) + (s[i] - '0');
-i++;
-}
-res *= sign;
-return (res);
-}
 
 /**
  * main - Prints the result of simple operations.
@@ -39,8 +13,8 @@ return (res);
 
 int main(int argc, char *argv[])
 {
-int num_1 = _atoi(argv[1]);
-int num_2 = _atoi(argv[3]);
+int num_1 = atoi(argv[1]);
+int num_2 = atoi(argv[3]);
 char *op = argv[2];
 int (*func_ptr)(int, int);
 if (argc != 4)
