@@ -49,7 +49,7 @@ printf("Error\n");
 exit(98);
 }
 
-if (*op != '+' && *op !='-' && *op != '/' &&
+if (*op != '+' && *op != '-' && *op != '/' &&
 *op != '%' && *op != '*')
 {
 printf("Error\n");
