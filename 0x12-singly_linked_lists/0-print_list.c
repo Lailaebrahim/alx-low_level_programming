@@ -1,4 +1,6 @@
 #include "main.h"
+#include "lists.h"
+
 /**
  * print_list - a function to print value in list
  * @h: pointer to head of list
