@@ -1,4 +1,7 @@
 #include <stdio.h>
+
+void printBeforeMain(void) __attribute__((constructor));
+
 /**
  * printBeforeMain - Prints a message before the
  *                   main function is executed.
@@ -10,9 +13,6 @@
  *              It prints a message indicating that
  *              it is printing before `main`.
  */
-
-void printBeforeMain(void) __attribute__((constructor));
-
 void printBeforeMain(void)
 {
 printf("You're beat! and yet, you must allow,\n");
