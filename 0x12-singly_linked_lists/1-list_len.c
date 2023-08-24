@@ -12,7 +12,7 @@ size_t list_len = 0;
 while (h)
 {
 list_len++;
-h = h->next
+h = h->next;
 }
-return (lest_len);
+return (list_len);
 }
