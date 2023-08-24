@@ -1,4 +1,4 @@
-#include "lists.h"
+#include <stdio.h>
 /**
  * printBeforeMain - Prints a message before the
  *                   main function is executed.
@@ -11,6 +11,7 @@
  *              it is printing before `main`.
  */
 
+void printBeforeMain(void) __attribute__((constructor));
 
 void printBeforeMain(void)
 {
