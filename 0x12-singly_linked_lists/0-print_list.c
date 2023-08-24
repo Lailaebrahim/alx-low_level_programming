@@ -8,28 +8,44 @@
 
 size_t print_list(const list_t *h)
 {
-unsigned int i = 0;
+
 size_t nodes_n = 0;
-char *temp = h->str;
-list_t *temp_h = h; 
+char *temp;
+unsigned int i = 0;
+
 if (h == NULL)
 return (0);
-while (temp_h)
+while (h)
 {
-if (temp->str == NULL)
+if (h->str == NULL)
 {
-temp->str = "(nil)";
-temp->len = 0;
-}
 _putchar('[');
-_putchar(h->len);
-_putchar('[');
+_putchar('0');
+ _putchar(']');
 _putchar(' ');
+_putchar('(');
+_putchar('n');
+_putchar('i');
+_putchar('l');
+_putchar(')');
+}
+else
+{
+_putchar('[');
+_putchar('0' + h->len);
+_putchar(']');
+_putchar(' ');
+temp = h->str;
 while (temp[i])
 {
 _putchar(temp[i]);
 i++;
 }
+}
+_putchar('\n');
 nodes_n++;
-temp_h = temp_h->next;
+h = h->next;
+i = 0;
+}
+return (nodes_n);
 }
