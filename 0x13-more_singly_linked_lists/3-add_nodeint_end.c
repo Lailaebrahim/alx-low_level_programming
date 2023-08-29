@@ -13,21 +13,17 @@ listint_t *temp = *head;
 listint_t *new_node = malloc(sizeof(listint_t));
 if (new_node == NULL || head == NULL)
 return (NULL);
+new_node->next = NULL;
+new_node->n = n;
 if (*head == NULL)
-{
 *head = new_node;
-(*head)->next = NULL;
-(*head)->n = n;
-}
 else
 {
-while (temp->next)
+while (temp->next != NULL)
 {
 temp = temp->next;
 }
 temp->next = new_node;
-new_node->next = NULL;
-temp->n = n;
 }
 return (new_node);
 }
