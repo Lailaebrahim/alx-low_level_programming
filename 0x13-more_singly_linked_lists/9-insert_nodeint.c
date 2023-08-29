@@ -33,6 +33,7 @@ else
 {
 new_node->next = *head;
 new_node->n = n;
+*head = new_node;
 }
 return (new_node);
 }
