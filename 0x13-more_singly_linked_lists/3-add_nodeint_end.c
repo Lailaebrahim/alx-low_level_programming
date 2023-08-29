@@ -17,6 +17,7 @@ if (*head == NULL)
 {
 *head = new_node;
 (*head)->next = NULL;
+(*head)->n = n;
 }
 else
 {
@@ -25,7 +26,8 @@ while (temp->next)
 temp = temp->next;
 }
 temp->next = new_node;
+new_node->next = NULL;
 temp->n = n;
 }
-return (*head);
+return (new_node);
 }
