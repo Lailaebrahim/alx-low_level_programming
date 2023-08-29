@@ -19,7 +19,7 @@ return (NULL);
 if (idx != 0)
 {
 temp = (*head);
-for (i = 0 ; i <= idx ; i++)
+for (i = 0 ; i < idx - 1 ; i++)
 {
 temp = temp->next;
 if (temp == NULL)
