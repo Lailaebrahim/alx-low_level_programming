@@ -26,5 +26,6 @@ temp = temp->next;
 }
 temp->next = new_node;
 temp->n = n;
+}
 return (*head);
 }
