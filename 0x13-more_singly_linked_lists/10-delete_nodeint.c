@@ -35,4 +35,4 @@ temp->next = next->next;
 free(next);
 return (1);
 }
-}   
+}
