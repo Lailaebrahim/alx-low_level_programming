@@ -10,15 +10,15 @@ unsigned int binary_to_uint(const char *b)
 {
 int i;
 unsigned int mask = 0;
-if (b == NULL)
+if (!b)
 return (0);
 for (i = 0 ; b[i] != '\0' ; i++)
 {
 if (b[i] != '0' &&  b[i] != '1')
 return (0);
-j <<= 1;
+mask <<= 1;
 if (b[i] == '1')
-j += 1;
+mask += 1;
 }
 return (mask);
 }
