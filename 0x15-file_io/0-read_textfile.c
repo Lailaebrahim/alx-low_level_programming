@@ -27,7 +27,7 @@ close(fd);
 return (0);
 }
 close(fd);
-wt = write(STDOUT_FILENO, buffer, letters);
+wt = write(STDOUT_FILENO, buffer, rd);
 if (wt == -1 || wt != rd)
 {
 free(buffer);
