@@ -28,9 +28,13 @@ return (0);
 }
 close(fd);
 wt = write(STDOUT_FILENO, buffer, letters);
-if (wt == -1 || wt != rd)
+if (wt == -1)
 {
 free(buffer);
+return (0);
+}
+if (wt != rd)
+{
 return (0);
 }
 return (wt);
