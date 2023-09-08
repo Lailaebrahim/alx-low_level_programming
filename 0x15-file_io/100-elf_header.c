@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdio.h>
+#include <elf.h>
 
 /**
  * get_type - determine file type
