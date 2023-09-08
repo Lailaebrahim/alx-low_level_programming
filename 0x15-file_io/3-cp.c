@@ -1,4 +1,4 @@
-#include< "main.h"
+#include "main.h"
 #define BUFFER_SIZE 1024
 /**
  * close_w - close function
