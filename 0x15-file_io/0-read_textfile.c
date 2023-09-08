@@ -26,11 +26,11 @@ free(buffer);
 close(fd);
 return (0);
 }
+close(fd);
 wt = write(STDOUT_FILENO, buffer, letters);
 if (wt == 0 || wt == -1 || wt != rd)
 {
 free(buffer);
-close(fd);
 return (0);
 }
 return (wt);
