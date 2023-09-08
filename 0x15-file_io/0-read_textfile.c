@@ -20,7 +20,7 @@ free(buffer);
 return (0);
 }
 rd = read(fd, buffer, letters);
-if (rd == 0 || rd == -1)
+if (rd == -1)
 {
 free(buffer);
 close(fd);
@@ -28,7 +28,7 @@ return (0);
 }
 close(fd);
 wt = write(STDOUT_FILENO, buffer, letters);
-if (wt == 0 || wt == -1 || wt != rd)
+if (wt == -1 || wt != rd)
 {
 free(buffer);
 return (0);
