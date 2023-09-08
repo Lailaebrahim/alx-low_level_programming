@@ -20,7 +20,7 @@ while (*(text_content + len) != '\0')
 len++;
 ret = write(fd, text_content, len);
 }
-if (ret != -1 || ret != len)
+if (ret == -1 || ret != len)
 return (-1);
 return (1);
 }
