@@ -16,7 +16,7 @@ return (NULL);
 while (str[len] != '\0')
 len++;
 
-cpy = (char *)malloc((sizeof(char) * len) + 1);
+cpy = (char *)malloc((sizeof(char) * len) +1);
 if (cpy == NULL)
 return (NULL);
 
