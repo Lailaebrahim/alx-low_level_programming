@@ -4,7 +4,7 @@
  * @h: pointer to head node
  * Return: Number of node
  */
-size_t print_dlistint(const dlistint_t *h)
+size_t dlistint_len(const dlistint_t *h)
 {
 size_t count_nodes = 0;
 const dlistint_t *temp = h;
