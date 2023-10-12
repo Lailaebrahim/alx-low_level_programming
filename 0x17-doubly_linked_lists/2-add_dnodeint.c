@@ -22,6 +22,11 @@ if (*head == NULL)
 return (newnode);
 }
 
+if (*head != NULL)
+{
+while ((*head)->prev != NULL)
+*head = (*head)->prev;
+}
 (newnode)->n = n;
 (newnode)->prev = NULL;
 (newnode)->next = *head;
