@@ -30,4 +30,5 @@ while ((*head)->prev != NULL)
 *head = newnode;
 return (newnode);
 }
+return (newnode);
 }
