@@ -18,7 +18,7 @@ value_cp = strdup(value);
 if (value_cp == NULL)
 return (0);
 index = key_index((const unsigned char *)key, ht->size);
-for(i = index; ht->array[i]; i++)
+for (i = index; ht->array[i]; i++)
 {
 if (strcmp(ht->array[i]->key, key) == 0)
 {
@@ -38,7 +38,7 @@ if (new_node->key == NULL)
 {
 free(value_cp);
 free(new_node);
-return (0); 
+return (0);
 }
 new_node->value = value_cp;
 new_node->next = ht->array[index];
