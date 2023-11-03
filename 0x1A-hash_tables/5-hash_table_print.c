@@ -18,7 +18,7 @@ if (ht->array[i] != NULL)
 if (flag == 1)
 printf(", ");
 temp = ht->array[i];
-while(temp != NULL)
+while (temp != NULL)
 {
 printf("'%s': '%s'", temp->key, temp->value);
 temp = temp->next;
