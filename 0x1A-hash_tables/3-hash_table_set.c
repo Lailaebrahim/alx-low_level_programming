@@ -25,7 +25,7 @@ while(new_node != NULL)
 if (strcmp(ht->array[index]->key, key) == 0)
 {
 free(ht->array[index]->value);
-strcpy(ht->array[index]->value, value_cp);
+ht->array[index]->value = value_cp;
 return (1);
 }
 new_node = new_node->next; }}
@@ -36,9 +36,10 @@ if (!new_node)
 {
 free(value_cp);
 return (0); }
-strcpy(new_node->key, strdup(key));
-strcpy(ht->array[index]->value, value_cp);
-ht->array[index]->next = NULL;
+new_node->key = strdup(key);
+ht->array[index]->value = value_cp;
+new_node->next = ht->array[index];
+ht->array[index] = new_node;
 return (1);
 }
 return (0);
