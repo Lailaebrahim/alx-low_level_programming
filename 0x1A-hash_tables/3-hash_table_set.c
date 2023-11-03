@@ -18,17 +18,15 @@ value_cp = strdup(value);
 if (value_cp == NULL)
 return (0);
 index = key_index((const unsigned char *)key, ht->size);
-if (ht->array[index] != NULL)
-{
 for(i = index; ht->array[i]; i++)
 {
 if (strcmp(ht->array[i]->key, key) == 0)
 {
 free(ht->array[i]->value);
 ht->array[i]->value = value_cp;
-return (1); }}}
-else
-{
+return (1);
+}
+}
 new_node = (hash_node_t *)malloc(sizeof(hash_node_t));
 if (new_node == NULL)
 {
@@ -42,5 +40,5 @@ return (0); }
 ht->array[index]->value = value_cp;
 new_node->next = ht->array[index];
 ht->array[index] = new_node;
-return (1); }
-return (0); }
+return (1);
+}
