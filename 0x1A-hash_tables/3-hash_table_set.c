@@ -31,13 +31,16 @@ new_node = (hash_node_t *)malloc(sizeof(hash_node_t));
 if (new_node == NULL)
 {
 free(value_cp);
-return (0); }
+return (0);
+}
 new_node->key = strdup(key);
 if (new_node->key == NULL)
 {
 free(value_cp);
-return (0); }
-ht->array[index]->value = value_cp;
+free(new_node);
+return (0); 
+}
+new_node->value = value_cp;
 new_node->next = ht->array[index];
 ht->array[index] = new_node;
 return (1);
