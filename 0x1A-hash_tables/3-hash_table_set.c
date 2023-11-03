@@ -12,7 +12,9 @@ unsigned long int index = 0;
 hash_node_t *new_node = NULL;
 if (ht == NULL || key == NULL || value == NULL || strlen(key) == 0)
 return (0);
-index = key_index(key, ht->size);
+unsigned char *_key_ = NULL;
+strcpy(_key_, key);
+index = key_index(_key_, ht->size);
 if (ht->array[index] != NULL)
 {
 if (strcmp(ht->array[index]->key, key) == 0)
