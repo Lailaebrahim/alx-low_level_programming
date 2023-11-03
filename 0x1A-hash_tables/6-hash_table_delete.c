@@ -19,7 +19,7 @@ while(temp1 != NULL)
 {
 temp2 = temp1->next;
 free(temp1->value);
-free(temp2->key);
+free(temp1->key);
 free(temp1);
 temp1 = temp2;
 }
