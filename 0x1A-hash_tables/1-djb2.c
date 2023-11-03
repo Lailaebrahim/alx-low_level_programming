@@ -10,7 +10,7 @@ int c;
 unsigned long int hash_code = 5831;
 while ((c = *str++))
 {
-hash_code = ((hash_code << 5) +hash_code) + c;
+hash_code = ((hash_code << 5) + hash_code)+c;
 }
 return (hash_code);
 }
