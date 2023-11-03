@@ -14,6 +14,9 @@ if (ht == NULL || key == NULL || *key == '\0')
 return (NULL);
 
 index = key_index((const unsigned char *)key, ht->size);
+if (index >= ht->size)
+return (NULL);
+
 if (strcmp(ht->array[index]->key, key) != 0)
 {
 temp = ht->array[index];
