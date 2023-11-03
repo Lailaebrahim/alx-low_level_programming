@@ -12,14 +12,17 @@ if (ht == NULL)
 return;
 for (i = 0; i < ht->size; i++)
 {
+if ( ht->array[i] != NULL)
+{
 temp1 = ht->array[i];
-if (temp1 != NULL)
+while(temp1 != NULL)
 {
 temp2 = temp1->next;
 free(temp1->value);
 free(temp2->key);
 free(temp1);
 temp1 = temp2;
+}
 }
 }
 free(table->array);
