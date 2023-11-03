@@ -20,7 +20,7 @@ return (0);
 if (ht->array[index] != NULL)
 {
 new_node = ht->array[index];
-while(new_node != NULL)
+while (new_node != NULL)
 {
 if (strcmp(ht->array[index]->key, key) == 0)
 {
