@@ -17,8 +17,6 @@ index = key_index((const unsigned char *)key, ht->size);
 if (index >= ht->size)
 return (NULL);
 
-if (strcmp(ht->array[index]->key, key) != 0)
-{
 temp = ht->array[index];
 while (temp != NULL)
 {
@@ -26,10 +24,6 @@ if (strcmp(temp->key, key) == 0)
 return (temp->value);
 temp = temp->next;
 }
-}
-else if (strcmp(ht->array[index]->key, key) == 0)
-{
-return (ht->array[index]->value);
-}
+
 return (NULL);
 }
