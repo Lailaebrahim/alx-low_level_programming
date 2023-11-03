@@ -12,10 +12,10 @@ if (ht == NULL)
 return;
 for (i = 0; i < ht->size; i++)
 {
-if ( ht->array[i] != NULL)
+if (ht->array[i] != NULL)
 {
 temp1 = ht->array[i];
-while(temp1 != NULL)
+while (temp1 != NULL)
 {
 temp2 = temp1->next;
 free(temp1->value);
