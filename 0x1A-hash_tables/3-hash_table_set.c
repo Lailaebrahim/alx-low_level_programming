@@ -16,42 +16,33 @@ return (0);
 index = key_index((const unsigned char *)key, ht->size);
 value_cp = strdup(value);
 if (value_cp == NULL)
-{
 return (0);
-}
 if (ht->array[index] != NULL)
 {
 if (strcmp(ht->array[index]->key, key) == 0)
 {
 (ht->array[index])->value = value_cp;
-return (1);
-}
+return (1); }
 else
 {
 new_node = (hash_node_t *)malloc(sizeof(hash_node_t));
 if (!new_node)
 {
 free(value_cp);
-return (1);
-}
-strcpy(new_node->key, key);
+return (1); }
+strcpy(new_node->key, strdup(key));
 strcpy(new_node->value, value_cp);
 new_node->next = ht->array[index];
 ht->array[index] = new_node;
-return (1);
-}
-}
+return (1); }}
 else
 {
 new_node = (hash_node_t *)malloc(sizeof(hash_node_t));
 if (!new_node)
 {
 free(value_cp);
-return (0);
-}
-strcpy(new_node->key, key);
+return (0); }
+strcpy(new_node->key, strdup(key));
 strcpy(ht->array[index]->value, value_cp);
 ht->array[index]->next = NULL;
-return (1);
-}
-}
+return (1); }}
