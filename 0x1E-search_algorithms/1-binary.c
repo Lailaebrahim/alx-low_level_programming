@@ -20,10 +20,10 @@ return (-1);
 while(l <= r)
 {
 printf("Searching in array: ");
-for (i = l; i <= r; i++)
+for (i = l; i < r; i++)
 printf("%d, ", array[i]);
 printf("%d\n", array[i]);
-m = l + (r - l)/2
+m = l + (r - l)/2;
 if (array[m] == value)
 return (m);
 if (array[m] < value)
